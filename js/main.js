@@ -87,6 +87,7 @@ const swiper = new Swiper(".swiper ", {
   scrollReveal.reveal(`
     #home .image, #home .text,
     #about .image, #about .text,
+    #contributors .contributor,
     #services header, #services .card,
     #testimonial header, #testimonials .testimonials
     #contact .text, #contact .links,

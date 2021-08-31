@@ -374,8 +374,8 @@ ul {
   background-color: white;
 }
 #testimunials .container {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 #testimunials header {
   margin-left: 1.5rem;
@@ -464,7 +464,8 @@ ul {
   font-size: 1rem;
 }
 
-/*FOOTER########################*/
+/*FOOTER########################
+*/
 footer {
   background-color: var(--base-color);
 }
@@ -522,35 +523,15 @@ footer .social a:hover {
   transform: translateY(0%);
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+@media (min-width: 768px) {
   main {
     margin-top: var(--header-height);
   }
-  nav .menu {
-    opacity: 1;
-    visibility: visible;
-    top: 0;
+  .container {
+    max-width: 1200px;
+
   }
-  nav .menu ul {
-    display: flex;
-    gap: 2rem;
-  }
-  nav .menu ul li a.title {
-    font: 400 1rem var(--body-font);
-    -webkit-font-smoothing: antialiased;
-  }
-  nav .icon-menu {
-    display: none;
-  }
-  nav .menu ul li a.title.active {
-    font-weight: bold;
-    -webkit-font-smoothing: auto;
-  }
+
   .section {
     padding: 10rem 0;
   }
@@ -584,11 +565,16 @@ footer .social a:hover {
   }
   #about img {
   }
+  #contributors .container,
+  #contact .container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
   #testimunials .container {
     margin: 0 auto;
   }
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
   .card {
     padding-left: 3rem;
@@ -598,6 +584,8 @@ footer .social a:hover {
   #contact .container {
     grid-auto-flow: column;
     align-items: center;
+
+    
   }
   #contact .text {
     max-width: 25rem;
@@ -617,9 +605,127 @@ footer .social a:hover {
   }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 920px) and (max-width: 1200px) {
   :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
   }
+  .section header,
+  #testimunials header {
+    max-width: 40rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container {
+    max-width: 100%;
+    margin: auto 1.5rem;
+  }
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+  #home .image {
+    order: 1;
+  }
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  #about .image::before{
+  content: '';
+  height: 95%;
+  width: 100%;
+  background-color: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  left: -10%;
+  z-index: 0;
+  }
+
+  #testimunials .container {
+    margin: 0 auto;
+  }
+  #contributors {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  #contributors.container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo {
+    font-size: 1.5rem;
+  }
+} */
+
+@media (min-width: 768px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  nav .icon-menu {
+    display: none;
+  }
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+  
+
 }
+@media (max-width: 768px) {
+  #home .container,
+  #about .container,
+  #contributors,
+  #services .container,
+  #testimunials .container,
+  #contact .container{
+    max-width: 80%;
+    margin: auto;
+  }
+
+  #about .text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+}
+
