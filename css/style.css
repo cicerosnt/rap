@@ -50,7 +50,7 @@ body {
 }
 
 .title {
-  font: 700 1.875rem var(--title-font);
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -275,6 +275,7 @@ ul {
 }
 #home .text h1 {
   margin-bottom: 1rem;
+  color: var(--title-color);
 }
 #home .text p {
   margin-bottom: 2rem;
@@ -365,8 +366,9 @@ ul {
   color: var(--base-color);
 }
 .card .title {
-  font-size: 1.5rem;
+  font-size: var(--subtitle-font-size);
   margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 /*testimunial##################*/
@@ -718,6 +720,11 @@ footer .social a:hover {
 
 }
 @media (max-width: 768px) {
+  :root {
+    --title-font-size: 1.5rem;
+    --subtitle-font-size: 1.125rem;
+    --subtitle-font-size: 1rem
+  }
   .container {
     max-width: 100%;
     margin-left: 1.5rem;
