@@ -286,7 +286,7 @@ ul {
   overflow: hidden;
 }
 #about .container {
-  margin: 0;
+  /* margin: 0; */
 }
 #about .image {
   position: relative;
@@ -335,7 +335,7 @@ ul {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
 }
 .contributor .person .grid {
   gap: 0.3rem;
@@ -523,12 +523,19 @@ footer .social a:hover {
   transform: translateY(0%);
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media (min-width: 768px) {
   main {
     margin-top: var(--header-height);
   }
   .container {
-    max-width: 1200px;
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -563,8 +570,6 @@ footer .social a:hover {
   #about .container {
     margin: 0 auto;
     grid-auto-flow: column;
-  }
-  #about img {
   }
   #contributors .container,
   #contact .container{
@@ -713,14 +718,10 @@ footer .social a:hover {
 
 }
 @media (max-width: 768px) {
-  #home .container,
-  #about .container,
-  #contributors,
-  #services .container,
-  #testimunials .container,
-  #contact .container{
-    max-width: 80%;
-    margin: auto;
+  .container {
+    max-width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   #about .text {
