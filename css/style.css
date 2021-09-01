@@ -529,7 +529,8 @@ footer .social a:hover {
   }
   .container {
     max-width: 1200px;
-
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section {
@@ -567,8 +568,8 @@ footer .social a:hover {
   }
   #contributors .container,
   #contact .container{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   #testimunials .container {
     margin: 0 auto;
